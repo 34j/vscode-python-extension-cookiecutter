@@ -1,6 +1,10 @@
 MIT License
 
 Copyright (c) 2021 Ryan Sonshine
+Copyright (c) 2022 34j and contirbutors
+{% if cookiecutter.github_user_name not in ["34j", "Ryan Sonshine"] %}
+Copyright (c) {{cookiecutter.__year}} {{cookiecutter.github_user_name}}
+{% endif %}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
