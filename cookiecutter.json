@@ -29,5 +29,8 @@
     "_extensions": [
         "jinja2_time.TimeExtension",
         "jinja2_strcase.StrcaseExtension"
+    ],
+    "_copy_without_render": [
+        "*.yml"
     ]
 }
