@@ -8,7 +8,9 @@ Cookiecutter for a VS Code extension for your favorite python tool. Linter, Form
 
 1. cookkiecutter
 
-## Installation
+## Getting Started
+
+### 1. Create project using cookiecutter
 
 ```shell
 py -m venv venv
@@ -25,10 +27,6 @@ Once you have installed,
 cookiecutter ./vscode-python-tools-extension-template-cookiecutter
 ```
 
-## Getting Started
+### 2. Upload to github
 
-Create `./.venv` and install libraries using `Makefile`.
 
-```shell
-make init
-```
