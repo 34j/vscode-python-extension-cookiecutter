@@ -4,7 +4,7 @@
   "description": "{{cookiecutter.short_explanation}}",
   "version": "0.0.0-development",
   "icon": "image/icon.png",
-  "preview": "{{cookiecutter.preview}}",
+  "preview": {{cookiecutter.preview}},
   "author": {
     "name": "{{cookiecutter.github_user_name}}",
     "url": "https://github.com/{{cookiecutter.github_user_name}}"
@@ -88,7 +88,7 @@
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
     "@types/vscode": "^1.70.0",
-    "@vscode/test-electron": "^2.1.5",
+    "@vscode/test-electron": "^2.1.5"
   },
   "dependencies": {
     "semantic-release-vsce": "^5.2.0",
