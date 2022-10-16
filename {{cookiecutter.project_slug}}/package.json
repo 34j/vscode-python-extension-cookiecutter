@@ -5,6 +5,7 @@
   "version": "0.0.0-development",
   "icon": "image/icon.png",
   "preview": {{cookiecutter.preview}},
+  "publisher": "{{cookiecutter.publisher_name}}",
   "author": {
     "name": "{{cookiecutter.github_user_name}}",
     "url": "https://github.com/{{cookiecutter.github_user_name}}"
@@ -32,7 +33,7 @@
       "{{cookiecutter.ext_name}}"
   ],
   "engines": {
-      "vscode": "^1.64.0"
+      "vscode": "^1.70.0"
   },
   "categories": [
       "{{cookiecutter.categories}}"
