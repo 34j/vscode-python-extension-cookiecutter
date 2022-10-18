@@ -1,6 +1,6 @@
 # Cookiecutter VSCode Python Tools Extensions
 
-Cookiecutter for a VS Code extension for your favorite python tool.
+Cookiecutter for creating Python VSCode Extension.
 
 ![Example](Example.png)
 
