@@ -1,12 +1,8 @@
 # Cookiecutter VSCode Python Tools Extensions
 
-Cookiecutter for a VS Code extension for your favorite python tool. Linter, Formatter, or Code Analysis, or all of those together.
+Cookiecutter for a VS Code extension for your favorite python tool.
 
 ![Example](Example.png)
-
-## Requirements
-
-1. cookkiecutter
 
 ## Features
 
@@ -20,15 +16,7 @@ Based on [ryansonshine/typescript\-npm\-package\-template](https://github.com/ry
 py -m venv venv
 "venv/scripts/activate"
 pip install -U cookiecutter jinja2-strcase
-git clone https://github.com/34j/vscode-python-tools-extension-template-cookiecutter.git
-cookiecutter ./vscode-python-tools-extension-template-cookiecutter
-```
-
-Once you have installed,
-
-```shell
-"venv/scripts/activate"
-cookiecutter ./vscode-python-tools-extension-template-cookiecutter
+cookiecutter [./vscode-python-extension-cookiecutter](https://github.com/34j/vscode-python-extension-cookiecutter.git)
 ```
 
 ### 2. Upload to github
