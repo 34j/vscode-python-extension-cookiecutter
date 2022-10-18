@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - master
 
 jobs:
   release:
@@ -22,7 +23,6 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: npx semantic-release
       - name: Upload Code Coverage

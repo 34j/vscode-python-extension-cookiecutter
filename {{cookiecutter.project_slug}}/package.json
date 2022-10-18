@@ -1,50 +1,64 @@
 {
-  "name": "typescript-npm-package-template",
+  "name": "{{cookiecutter.ext_name}}",
+  "displayName": "{{cookiecutter.display_name}}",
+  "description": "{{cookiecutter.short_explanation}}",
   "version": "0.0.0-development",
-  "description": "A template for creating npm packages using TypeScript and VSCode",
-  "main": "./lib/index.js",
-  "files": [
-    "lib/**/*"
-  ],
-  "scripts": {
-    "build": "tsc --project tsconfig.build.json",
-    "clean": "rm -rf ./lib/",
-    "cm": "cz",
-    "lint": "eslint ./src/ --fix",
-    "prepare": "husky install",
-    "semantic-release": "semantic-release",
-    "test:watch": "jest --watch",
-    "test": "jest --coverage",
-    "typecheck": "tsc --noEmit"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryansonshine/typescript-npm-package-template.git"
-  },
-  "license": "MIT",
+  "icon": "image/icon.png",
+  "preview": false,
   "author": {
-    "name": "Ryan Sonshine",
-    "email": "ryansonshine@users.noreply.github.com",
-    "url": "https://github.com/ryansonshine"
+    "name": "{{cookiecutter.github_user_name}}",
+    "url": "https://github.com/{{cookiecutter.github_user_name}}"
   },
-  "engines": {
-    "node": ">=12.0"
+  "serverInfo": {
+      "name": "{{cookiecutter.display_name}}",
+      "module": "{{cookiecutter.ext_name}}"
+  },
+  "publisher": "{{cookiecutter.publisher_name}}",
+  "license": "MIT",
+  "homepage": "{{cookiecutter.__github_repo_url}}",
+  "repository": {
+      "type": "git",
+      "url": "{{cookiecutter.__github_repo_url}}.git"
+  },
+  "bugs": {
+      "url": "{{cookiecutter.__github_repo_url}}/issues"
+  },
+  "galleryBanner": {
+      "color": "#1e415e",
+      "theme": "dark"
   },
   "keywords": [
-    "boilerplate",
-    "template",
-    "typescript",
-    "vscode",
-    "jest",
-    "husky",
-    "commitizen",
-    "semantic-release",
-    "codecov"
+      "python",
+      "{{cookiecutter.ext_name}}"
   ],
-  "bugs": {
-    "url": "https://github.com/ryansonshine/typescript-npm-package-template/issues"
+  "engines": {
+      "vscode": "^1.70.0"
   },
-  "homepage": "https://github.com/ryansonshine/typescript-npm-package-template#readme",
+  "categories": [
+      "{{cookiecutter.categories}}"
+  ],
+  "extensionDependencies": [
+      "ms-python.python"
+  ],
+  "activationEvents": [
+      "onLanguage:python",
+      "workspaceContains:*.py",
+      "onCommand:{{cookiecutter.ext_name}}.restart"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "format-check": "prettier --check 'src/**/*.ts' 'build/**/*.yml' '.github/**/*.yml'",
+    "test": "node ./out/test/runTest.js",
+    "cm": "cz",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release",
+    "typecheck": "tsc --noEmit"
+  },  
   "devDependencies": {
     "@ryansonshine/commitizen": "^4.2.8",
     "@ryansonshine/cz-conventional-changelog": "^3.3.4",
@@ -65,7 +79,53 @@
     "semantic-release": "^19.0.2",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/vscode": "^1.70.0",
+    "@vscode/test-electron": "^2.1.5"
+  },
+  "dependencies": {
+    "semantic-release-vsce": "^5.2.0",
+    "vscode-python-extension-core": "^1.0.9"
+  },
+  "contributes": {
+    "configuration": [
+      {
+        "title": "{{cookiecutter.display_name}}",
+        "properties": {
+          "{{cookiecutter.ext_name}}.useIntegratedTerminal": {
+            "type": "boolean",
+            "default": false,
+            "scope": "window",
+            "description": "Whether to use integrated terminal instead of hidden terminal. (Not recommended)"
+          }
+        }
+      }
+    ],
+    "commands": [
+      {
+        "command": "{{cookiecutter.ext_name}}.run",
+        "category": "{{cookiecutter.display_name}}",
+        "title": "Run {{cookiecutter.module_name}}",
+        "enablement": "resourceLangId == python || explorerResourceIsFolder"
+      },
+      {
+        "command": "{{cookiecutter.ext_name}}.runForWorkspaceFolders",
+        "title": "Python: Run {{cookiecutter.module_name}} For The Workspace Folders",
+        "category": "{{cookiecutter.display_name}}"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceLangId == python || explorerResourceIsFolder",
+          "command": "{{cookiecutter.ext_name}}.run",
+          "group": "2_workspace@-1"
+        }
+      ]
+    }
   },
   "config": {
     "commitizen": {
@@ -80,53 +140,25 @@
       "main"
     ],
     "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
       [
-        "@semantic-release/commit-analyzer",
+        "semantic-release-vsce",
         {
-          "preset": "conventionalcommits",
-          "releaseRules": [
+          "packageVsix": true
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
             {
-              "type": "build",
-              "scope": "deps",
-              "release": "patch"
+              "path": "*.vsix",
+              "label": "Extension File"
             }
           ]
         }
-      ],
-      [
-        "@semantic-release/release-notes-generator",
-        {
-          "preset": "conventionalcommits",
-          "presetConfig": {
-            "types": [
-              {
-                "type": "feat",
-                "section": "Features"
-              },
-              {
-                "type": "fix",
-                "section": "Bug Fixes"
-              },
-              {
-                "type": "build",
-                "section": "Dependencies and Other Build Updates",
-                "hidden": false
-              }
-            ]
-          }
-        }
-      ],
-      "@semantic-release/npm",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }
-      ],
-      "@semantic-release/github"
+      ]
     ]
   }
 }

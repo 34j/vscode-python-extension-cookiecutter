@@ -8,7 +8,13 @@ Cookiecutter for a VS Code extension for your favorite python tool. Linter, Form
 
 1. cookkiecutter
 
-## Installation
+## Features
+
+Based on [ryansonshine/typescript\-npm\-package\-template](https://github.com/ryansonshine/typescript-npm-package-template).
+
+## Getting Started
+
+### 1. Create project using cookiecutter
 
 ```shell
 py -m venv venv
@@ -25,10 +31,7 @@ Once you have installed,
 cookiecutter ./vscode-python-tools-extension-template-cookiecutter
 ```
 
-## Getting Started
+### 2. Upload to github
 
-Create `./.venv` and install libraries using `Makefile`.
-
-```shell
-make init
-```
+1. Get [Azure DepOps](https://dev.azure.com/) Personal Access Token.
+2. Goto [Github repo page]({{cookiecutter.__github_repo_url}}) and [add Actions secrets]({{cookiecutter.__github_repo_url}}/settings/secrets/actions) from `Settings` -> `Secrets` -> `Actions`.
