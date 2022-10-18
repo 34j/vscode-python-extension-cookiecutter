@@ -23,3 +23,4 @@ cookiecutter [./vscode-python-extension-cookiecutter](https://github.com/34j/vsc
 
 1. Get [Azure DepOps](https://dev.azure.com/) Personal Access Token.
 2. Goto [Github repo page]({{cookiecutter.__github_repo_url}}) and [add Actions secrets]({{cookiecutter.__github_repo_url}}/settings/secrets/actions) from `Settings` -> `Secrets` -> `Actions`.
+3. Modify "keywords" in package.json. (Optional)
