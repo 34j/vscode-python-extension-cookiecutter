@@ -18,8 +18,4 @@ Consider using [Composite Formatter](https://marketplace.visualstudio.com/items?
 |----|-----------|
 | `{{cookiecutter.ext_name}}.useIntegratedTerminal`| Whether to use integrated terminal instead of hidden terminal. (Not recommended)|
 
-## Extension Commands
-
-`{{cookiecutter.display_name}}: Restart Server`: Restart Server.
-
 <!--## Known Issues-->
