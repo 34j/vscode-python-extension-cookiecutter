@@ -10,6 +10,8 @@
 
 If you like this extension, consider staring!
 
+[![GitHub Repo stars](https://img.shields.io/github/stars/{{cookiecutter.github_user_name}}/{{cookiecutter.github_repo_name}}?style=social)]({{cookiecutter.__github_repo_url}})
+
 Consider using [Composite Formatter](https://marketplace.visualstudio.com/items?itemName=mikoz.composite-formatter) to run multiple formatters at once as a single formatter.
 
 ## Extension Settings
