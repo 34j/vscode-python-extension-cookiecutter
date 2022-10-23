@@ -26,4 +26,9 @@ cookiecutter https://github.com/34j/vscode-python-extension-cookiecutter.git
 
 1. Get [Azure DepOps](https://dev.azure.com/) Personal Access Token.
 2. Goto [Github repo page]({{cookiecutter.__github_repo_url}}) and [add Actions secrets]({{cookiecutter.__github_repo_url}}/settings/secrets/actions) from `Settings` -> `Secrets` -> `Actions`.
-3. Modify "keywords" in package.json. (Optional)
+3. `git add -A && git commit -m "chore: Initial Commit"`
+4. `npm install`
+5. Modify 4 braces (`[], [], [], []`) in `src/extension.ts`.
+6. Debug by pressing `F5` and check if it properly works.
+7. Modify "keywords" in package.json. (Optional)
+8. `git add -A && git commit -m "feat: First Release"`
