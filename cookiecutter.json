@@ -15,12 +15,6 @@
     "__github_repo_url": "https://github.com/{{cookiecutter.github_user_name}}/{{cookiecutter.github_repo_name}}",
     "__extension_id": "{{cookiecutter.publisher_name}}.{{cookiecutter.ext_name}}",
     "__marketplace_url": "https://marketplace.visualstudio.com/items?itemName={{cookiecutter.__extension_id}}",
-    "version": "0.0.1",
-    "categories": [
-        "Formatters",
-        "Linters",
-        "Programming Languages"
-    ],
     "__year": "{% now 'utc', '%Y' %}",
     "_extensions": [
         "jinja2_time.TimeExtension",
