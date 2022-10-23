@@ -16,7 +16,10 @@ Based on [ryansonshine/typescript\-npm\-package\-template](https://github.com/ry
 py -m venv venv
 "venv/scripts/activate"
 pip install -U cookiecutter jinja2-strcase
-cookiecutter [./vscode-python-extension-cookiecutter](https://github.com/34j/vscode-python-extension-cookiecutter.git)
+```
+
+```shell
+cookiecutter https://github.com/34j/vscode-python-extension-cookiecutter.git
 ```
 
 ### 2. Upload to github
