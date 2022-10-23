@@ -55,7 +55,6 @@
     "format-check": "prettier --check 'src/**/*.ts' 'build/**/*.yml' '.github/**/*.yml'",
     "test": "node ./out/test/runTest.js",
     "cm": "cz",
-    "prepare": "husky install",
     "semantic-release": "semantic-release",
     "typecheck": "tsc --noEmit"
   },  
