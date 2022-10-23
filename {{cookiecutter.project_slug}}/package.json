@@ -29,7 +29,7 @@
   },
   "keywords": [
       "python",
-      "{{cookiecutter.ext_name}}"
+      "{{cookiecutter.module_name}}"
   ],
   "engines": {
       "vscode": "^1.70.0"
