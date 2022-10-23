@@ -31,7 +31,7 @@ cookiecutter https://github.com/34j/vscode-python-extension-cookiecutter.git
 5. Modify 4 braces (`[], [], [], []`) in `src/extension.ts`.
 6. Debug by pressing `F5` and check if it properly works.
 7. Modify "keywords" in package.json. (Optional)
-8. `git add -A && git commit -m "feat: 
+8. `git add -A && git commit -m "feat: Initial Release"`
 
 ## License Notes
 
