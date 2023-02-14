@@ -1,12 +1,10 @@
 # Cookiecutter for VSCode Python Extensions
 
-Cookiecutter for creating a Python VSCode Extension.  
+This template helps you create a VSCode extension for a specific Python package, such as Black, isort, etc.
 
 ![Example](Example.png)
 
 ## Features
-
-This template helps you create a VSCode extension for a specific Python package, such as Black, isort, etc.
 
 - Uses [34j/vscode-python-extension-core](https://github.com/34j/vscode-python-extension-core) to allow you to create an extension just by modifying 4 braces (`[], [], [], []`) in one file.
 - Based on [ryansonshine/typescript\-npm\-package\-template](https://github.com/ryansonshine/typescript-npm-package-template).
