@@ -1,12 +1,27 @@
-# Cookiecutter VSCode Python Tools Extensions
+# Cookiecutter for VSCode Python Extensions
 
-Cookiecutter for creating Python VSCode Extension.
+Cookiecutter for creating a Python VSCode Extension.  
 
 ![Example](Example.png)
 
 ## Features
 
-Based on [ryansonshine/typescript\-npm\-package\-template](https://github.com/ryansonshine/typescript-npm-package-template).
+This template helps you create a VSCode extension for a specific Python package, such as Black, isort, etc.
+
+- Uses [34j/vscode-python-extension-core](https://github.com/34j/vscode-python-extension-core) to allow you to create an extension just by modifying 4 braces (`[], [], [], []`) in one file.
+- Based on [ryansonshine/typescript\-npm\-package\-template](https://github.com/ryansonshine/typescript-npm-package-template).
+  - [Semantic Release](https://github.com/semantic-release/semantic-release)
+  - [Issue Templates](https://github.com/ryansonshine/typescript-npm-package-template/tree/main/.github/ISSUE_TEMPLATE)
+  - [GitHub Actions](https://github.com/ryansonshine/typescript-npm-package-template/tree/main/.github/workflows)
+  - [Codecov](https://about.codecov.io/)
+  - [VSCode Launch Configurations](https://github.com/ryansonshine/typescript-npm-package-template/blob/main/.vscode/launch.json)
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [Husky](https://github.com/typicode/husky)
+  - [Lint Staged](https://github.com/okonet/lint-staged)
+  - [Commitizen](https://github.com/search?q=commitizen)
+  - [Jest](https://jestjs.io/)
+  - [ESLint](https://eslint.org/)
+  - [Prettier](https://prettier.io/)
 
 ## Getting Started
 
